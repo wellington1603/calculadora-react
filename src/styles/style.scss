@@ -1,0 +1,97 @@
+@import './fonts.scss';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E5E5E5;
+    height: 100vh;
+    width: 100vw;
+    
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+.body-cal{
+    display: grid;
+    height: 812px;
+    width: 375px;
+    background-color: #17181A;
+    border-radius: 39px;
+    color: #fff;
+}
+
+.calc-operacao{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+
+}
+
+.display{
+    grid-column: span 4;
+    grid-row: span 6;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+
+    &-content{
+        margin-right: 33px;
+    }
+
+    &-operacao{
+        font-size: 24px;
+        color: #818181;
+        text-align: right;
+    }
+
+    &-resultado{
+        font-size: 48px;
+        font-weight: 500;
+        text-align: right;
+    }
+}
+
+
+.button{
+   
+    border-radius: 16px;
+    background-color: #303136;
+    color: #29A8FF;
+    border: none;
+    color: '#29A8FF';
+    font-size: 32px;
+    margin: 0px 10px 20px 10px;
+    min-width: 60px;
+
+    &.doubleColumn{
+        grid-column: span 2;
+    }
+
+    &.doubleRow{
+        grid-row: span 2;
+    }
+
+    &.operation{
+        color: #339DFF;
+        background-color: #005DB2;
+    }
+
+    &.igual{
+        color: #B2DAFF;
+        background-color: #1991FF;
+    }
+
+    &.clear{
+        color: #A5A5A5;
+        background-color: #616161;
+    }
+}
